@@ -5,13 +5,12 @@ namespace lamela_verduleria
 {
     public class Operations
     {
-    public static void Menu(string text){
+//recives every titile and put it in format
+    public static void Title(string text){
         int widith= Console.WindowWidth;
         int wid=(widith/2) - text.Length ;
         string lines= new string('#',widith);
-        string line2= $"#";
         Console.Write(lines+"\n"+text+"\n"+lines);
-        
 
     }
     
