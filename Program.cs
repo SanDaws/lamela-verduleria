@@ -61,7 +61,7 @@ class Program
 
     }
 
-    static void Main(string[] args)    {
+    static void Main()    {
         //burned products
         inventory.Add("cilantro",[100,200000]);
         inventory.Add("naranjas",[3000,200000]);
