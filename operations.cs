@@ -8,7 +8,7 @@ namespace lamela_verduleria
 //recives every titile and put it in format
     public static void Title(string text,char chor){
         int widith= Console.WindowWidth;
-        int wid=(widith/2) - text.Length ;
+        int wid=widith- text.Length ;
         string lines= new string(chor,widith);
         Console.Write(lines+"\n"+text+"\n"+lines);
 

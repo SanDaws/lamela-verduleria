@@ -5,8 +5,6 @@ class Program
     // format : {"product",[price,units]}
     public static Dictionary<string,int[]> inventory = new Dictionary<string, int[]>();
     
-
-
     public static void Menu(){
         Operations.ConsoClean();
         char option ='0';

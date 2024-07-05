@@ -62,7 +62,7 @@ namespace lamela_verduleria
             if (string.IsNullOrEmpty(newPrice)){// if it's empty
                 newp=(int)products[productName].GetValue(0);
             }else{
-                
+                newp= int.Parse(newPrice);
             }
             //new capacity
             Console.Write("Nueva cantidad de unidades del producto");
@@ -72,6 +72,7 @@ namespace lamela_verduleria
                newc=(int)products[productName].GetValue(1) ;
                                
             }else{
+                newc=int.Parse(newCapacity);
             }
 
             //if need to change the name
@@ -97,7 +98,7 @@ namespace lamela_verduleria
         public static void Delete(Dictionary<string,int[]> products){
             Operations.ConsoClean();
             Operations.Title("Eliminar producto",'#');
-
+            
             Console.Write("nombre del producto a eliminar");
             string productName=Console.ReadLine();
             if (products.ContainsKey(productName)==false){
