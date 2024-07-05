@@ -1,14 +1,16 @@
 ﻿namespace lamela_verduleria;
 
 class Program
-{
-    public static Dictionary<string,int[]> inventory =new Dictionary<string, int[]>();
+{   
+    // format : {"product",[price,units]}
+    public static Dictionary<string,int[]> inventory = new Dictionary<string, int[]>();
     
 
 
-    static void Menu(){
+    public static void Menu(){
+        Operations.ConsoClean();
         char option ='0';
-        Operations.Title("tienda Lamela");
+        Operations.Title("tienda Lamela",'#');
         Console.Write(@"
         opciones:
         1:Agregar nuevo producto
@@ -44,7 +46,7 @@ class Program
             break;
             case's'://exit
             Operations.ConsoClean();
-            Operations.Title("Saliendo del programa");
+            Operations.Title("Saliendo del programa",'═');
             Environment.Exit(0);
             break;
             
@@ -60,7 +62,12 @@ class Program
     }
 
     static void Main(string[] args)    {
-        inventory.Add("",[]);
+        //burned products
+        inventory.Add("cilantro",[100,200000]);
+        inventory.Add("naranjas",[3000,200000]);
+        inventory.Add("Mandarinas",[2000,200000]);
+        inventory.Add("Ochuvas",[800,200000]);
+
         Menu();
 
 
