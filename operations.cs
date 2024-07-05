@@ -13,6 +13,10 @@ namespace lamela_verduleria
         Console.Write(lines+"\n"+text+"\n"+lines);
 
     }
+    public static void ConsoClean(){
+        Console.Clear();
+    }
+
     
     }
 }
